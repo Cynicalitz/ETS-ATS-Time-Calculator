@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="ETS2_Time_Calculator.rCalculator"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:ui="http://schemas.modernwpf.com/2019"
+             xmlns:local="clr-namespace:ETS2_Time_Calculator"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="400"
+             >
+    <Grid>
+        <StackPanel>
+            <Label Content="YOUR VALUES" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="16" Background="#161616" Foreground="White" Margin="0,0,0,10" Height="32"/>
+            <TextBlock Text="Your real time left (hours/minutes):" HorizontalAlignment="Center" FontSize="16" Margin="0,0,0,5" />
+            <Grid Margin="10,0,10,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <ComboBox x:Name="hourComboBox3" Grid.Column="0" Width="170px"/>
+                <ComboBox x:Name="minuteComboBox3" Grid.Column="1" Width="170px" HorizontalAlignment="Right"/>
+            </Grid>
+            <TextBlock Text="In-Game Time left to deliver (hours/minutes):" FontSize="16" HorizontalAlignment="Center" Margin="0,0,0,5"/>
+            <Grid Margin="10,0,10,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <ComboBox x:Name="hourComboBox" Grid.Column="0" Width="170px"/>
+                <ComboBox x:Name="minuteComboBox" Grid.Column="1" Width="170px" HorizontalAlignment="Right"/>
+            </Grid>
+            <Button Content="Calculate" Click="OnConvertButtonClick" HorizontalAlignment="Stretch"/>
+            <Label Content="CALCULATION" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="16" Background="#161616" Foreground="White" Margin="0, 10" Height="32"/>
+            <TextBlock Text="Time" HorizontalAlignment="Center" FontWeight="Medium" FontSize="16"/>
+            <TextBlock x:Name="outputRTime" Text="WAITING FOR CALCULATION" TextWrapping="WrapWithOverflow" FontSize="16" TextAlignment="Center"/>
+            <TextBlock Text="Distance" HorizontalAlignment="Center" FontWeight="Medium" FontSize="16"/>
+            <TextBlock x:Name="outputRSpeed" Text="WAITING FOR CALCULATION" TextWrapping="WrapWithOverflow" FontSize="16" TextAlignment="Center"/>
+        </StackPanel>
+        <TextBlock Text="Remember! Distance calculated is based if you will go 80km/h which is impossible by trip." TextWrapping="WrapWithOverflow" FontSize="12" TextAlignment="Center" VerticalAlignment="Bottom" Margin="20,0,20,40" Foreground="#FFC30000"/>
+        <TextBlock Text="Created by Cynicalitz" TextWrapping="WrapWithOverflow" FontSize="16" FontWeight="Black" TextAlignment="Center" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,10,10" Foreground="#19FFFFFF"/>
+    </Grid>
+</UserControl>
